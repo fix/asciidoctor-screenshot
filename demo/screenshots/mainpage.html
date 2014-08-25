@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+
+<script src="js/asciidoctor-all.min.js"></script>
+<script src="js/base64.js"></script>
+<script src="js/gist.js"></script>
+<script src="js/docgist.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400" rel="stylesheet" />
+
+<link href="style/asciidoctor.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
+
+<style>
+    #content {
+        margin: 1em auto;
+        max-width: 60em;
+    }
+
+    #gist-id {
+        width: 20em;
+        height: auto;
+    }
+
+    .navbar a {
+        text-decoration: none;
+    }
+
+    .navbar * {
+        box-sizing: content-box;
+    }
+
+    div.navbar-header {
+        height: 52px;
+    }
+
+    #nav-buttons {
+        margin: 8px 0;
+        display: inline-block;
+    }
+
+    div.alert {
+        font-size: 1.125rem;
+    }
+
+    @media print {
+        a.bare:after {
+            content: none;
+        }
+    }
+</style>
+
+</head><body>
+<div class="navbar navbar-default">
+    <div class="navbar-header">
+        <a href="./" class="navbar-brand">
+            <i class="fa fa-pencil-square"></i> DocGist
+        </a>
+    </div>
+    <div>
+        <span id="nav-buttons">
+            <a style="" target="_blank" href="" id="gist-link" class="btn btn-success">
+                <i class="fa fa-github"></i> Page Source
+            </a>
+            <a target="_blank" href="https://github.com/asciidoctor/docgist" class="btn btn-default">
+                <i class="fa fa-code-fork"></i> Project Home
+            </a>
+
+            <div class="btn-group">
+                <a data-target="#" data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                    <i class="fa fa-share-alt"></i> Share
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a title="Tweet" data-toggle="tooltip" target="_blank" href="" id="twitter-share">
+                        <i class="fa fa-fw fa-twitter-square"></i> Twitter
+                    </a></li>
+                    <li><a title="Share link on Facebook" data-toggle="tooltip" target="_blank" href="" id="facebook-share">
+                        <i class="fa fa-fw fa-facebook-square"></i> Facebook
+                    </a></li>
+                    <li><a title="Share link on Google+" data-toggle="tooltip" target="_blank" href="" id="google-plus-share">
+                        <i class="fa fa-fw fa-google-plus-square"></i> Google+
+                    </a></li>
+                </ul>
+            </div>
+        </span>
+
+        <form class="navbar-form pull-right">
+            <div class="input-group">
+          <span class="input-group-addon">
+            <i class="fa fa-github"></i> <i class="fa fa-dropbox"></i>
+          </span>
+                <input type="text" placeholder="GitHub Gist/File / Dropbox URL" id="gist-id" class="span2 form-control" />
+            </div>
+        </form>
+    </div>
+</div>
+<div id="content">
+    <img style="margin: 5em;" src="images/loading.gif" alt="loading" />
+</div>
+
+
+
+</body></html>
