@@ -1,229 +1,148 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" class="  "><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
-  <meta charset="utf-8" />
-  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 
-  <title>Hello, AsciiDoc!</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-  <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="HheB+UJ2Y0rhP1OOxxdoX5zW0ihNFfnVkkX9ucPokkUeOqnKoeP/M8zvmFMrSTWQLb9qcjMsEvjkGmB31aRz/w==" />
-  <meta content="width=960" name="viewport" />
+<!-- Bootstrap -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
 
+<script src="js/asciidoctor-all.min.js"></script>
+<script src="js/base64.js"></script>
+<script src="js/gist.js"></script>
+<script src="js/docgist.js"></script>
 
-    <link href="https://github.com/humans.txt" rel="author" type="text/plain" />
-    <meta name="octolytics-app-id" content="gist" /><meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-script-host" content="collector-cdn.github.com" /><meta name="octolytics-dimension-request_id" content="500F667B:7B5C:138C6DA4:53FC6BC2" />
-  <link href="https://gist-assets.github.com/" rel="assets" />
-  <link href="https://gist-assets.github.com/assets/dist/ZeroClipboard-b3cbd0443d74e78c5f5b5f5941a19846.swf" rel="zeroclipboard-assets" />
-  <link href="https://gist-assets.github.com/assets/editor-7cb0f66ff975895401bba72ec8dff9e1.js" rel="editor-assets" />
-  <link href="/" rel="mount-point" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400" rel="stylesheet" />
 
+<link href="style/asciidoctor.css" rel="stylesheet" />
 
-  <link rel="stylesheet" media="screen, print" href="https://gist-assets.github.com/assets/application-5fb8c4f69fc225ad5793ca4800d35966.css" />
-  <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://gist-assets.github.com/assets/application-da339833ab6d08b3c0b7c2d034851097.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
 
-      <meta content="summary" name="twitter:card" />
-  <meta content="@github" name="twitter:site" />
-  <meta content="mojavelinux/hello-asciidoc.adoc" property="og:title" />
-  <meta content="githubog:gist" property="og:type" />
-  <meta content="https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42" property="og:url" />
-  <meta content="https://avatars1.githubusercontent.com/u/79351?s=140" property="og:image" />
-  <meta content="GitHub Gists" property="og:site_name" />
-  <meta content="Hello, AsciiDoc! - Gist is a simple way to share snippets of text and code with others." property="og:description" />
-  <meta content="Hello, AsciiDoc! - Gist is a simple way to share snippets of text and code with others." name="description" />
+<style>
+    #content {
+        margin: 1em auto;
+        max-width: 60em;
+    }
 
+    #gist-id {
+        width: 20em;
+        height: auto;
+    }
 
-<script src="//collector-cdn.github.com/assets/api.js"></script></head>
+    .navbar a {
+        text-decoration: none;
+    }
 
-<body data-plan="" class=" ">
+    .navbar * {
+        box-sizing: content-box;
+    }
 
-  <div id="wrapper">
-    
+    div.navbar-header {
+        height: 52px;
+    }
 
-    <div class="header header-logged-out" id="header">
-      <div class="container">
-        <a href="https://gist.github.com/" class="header-logo-wordmark">
-          <span class="octicon octicon-logo-github"></span>
-          <span class="octicon-logo octicon-logo-gist"></span>
+    #nav-buttons {
+        margin: 8px 0;
+        display: inline-block;
+    }
+
+    div.alert {
+        font-size: 1.125rem;
+    }
+
+    @media print {
+        a.bare:after {
+            content: none;
+        }
+    }
+</style>
+
+<script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({  tex2jax: {    inlineMath: [["\\(", "\\)"]],    displayMath: [["\\[", "\\]"]],    ignoreClass: "nostem|nostem|nolatexmath"  },  asciimath2jax: {    delimiters: [["\\$", "\\$"]],    ignoreClass: "nostem|nostem|noasciimath"  }});</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.4.0/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script><title>Hello, AsciiDoc!</title><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head><body><div id="MathJax_Message" style="display: none;"></div>
+<div class="navbar navbar-default">
+    <div class="navbar-header">
+        <a href="./" class="navbar-brand">
+            <i class="fa fa-pencil-square"></i> DocGist
         </a>
-
-        <div class="header-actions">
-          <a href="https://github.com/signup?return_to=gist" class="button primary">Sign up for a GitHub account</a>
-          <a data-skip-pjax="" href="https://gist.github.com/login?return_to=%2Fmojavelinux%2F9a8d3f1d32a8f0656a42" class="button">Sign in</a>
-        </div>
-        <div class="divider-vertical"></div>
-        <div class="topsearch">
-  <form accept-charset="UTF-8" data-pjax-remote="push" action="/search" id="top_search_form">
-    <div class="search">
-      <input type="text" value="" autocorrect="off" autocomplete="off" data-hotkey="/" placeholder="Search…" name="q" class="search js-search js-navigation-enable " />
-
     </div>
-    <div class="divider-vertical"></div>
-  </form>
-  <ul class="top-nav">
-    <li class="explore"><a href="/discover">All Gists</a></li>
-  </ul>
-</div>
+    <div>
+        <span id="nav-buttons">
+            <a style="" target="_blank" href="https://gist.github.com/9a8d3f1d32a8f0656a42" id="gist-link" class="btn btn-success">
+                <i class="fa fa-github"></i> Page Source
+            </a>
+            <a target="_blank" href="https://github.com/asciidoctor/docgist" class="btn btn-default">
+                <i class="fa fa-code-fork"></i> Project Home
+            </a>
 
-      </div>
-    </div>
-
-    <div data-pjax-container="" id="js-pjax-container" class="site-content">
-      <div data-url="/mojavelinux/9a8d3f1d32a8f0656a42" class="site-container js-site-container" id="js-flash-container">
-  
-  
-
-<meta name="octolytics-dimension-public" content="true" /><meta name="octolytics-dimension-gist_id" content="13870090" /><meta name="octolytics-dimension-gist_name" content="9a8d3f1d32a8f0656a42" /><meta name="octolytics-dimension-anonymous" content="false" /><meta name="octolytics-dimension-owner_id" content="79351" /><meta name="octolytics-dimension-owner_login" content="mojavelinux" /><meta name="octolytics-dimension-forked" content="false" />
-
-<div class="pagehead repohead">
-  <div class="container">
-    <div class="title-actions-bar">
-      <ul class="pagehead-actions">
-
-
-      </ul>
-      <h1 class="entry-title " itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
-  <div class="meta">
-    <div class="gist-author">
-      <img width="26" height="26" src="https://avatars1.githubusercontent.com/u/79351?s=140" />
-        <span class="author vcard">
-            <span itemprop="title"><a href="/mojavelinux">mojavelinux</a></span>
-        </span> /
-      <strong><a class="js-current-repository" href="/mojavelinux/9a8d3f1d32a8f0656a42">hello-asciidoc.adoc</a></strong>
-    </div>
-    <div class="gist-timestamp">
-        <span class="datetime">Last active <time is="relative-time" datetime="2014-08-13T19:23:51Z" title="Aug 13, 2014, 9:23 PM GMT+2">13 days ago</time></span>
-    </div>
-</div></h1>
-
-    </div>
-
-  </div>
-</div>
-
-
-<div class="container">
-  <div data-updated="false" data-created="false" data-version="355cf574b2340fbc922d391be12b95ce9df27e8b" class="gist js-gist-container gist-with-sidebar with-full-navigation">
-
-      <div class="gist-sidebar clearfix">
-  <div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders">
-    <div class="sunken-menu-contents">
-      <ul class="sunken-menu-group">
-        <li aria-label="Code" class="tooltipped tooltipped-w">
-          <a href="/mojavelinux/9a8d3f1d32a8f0656a42" data-pjax="true" class="sunken-menu-item selected" aria-label="Code">
-            <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
-            <img width="16" height="16" src="https://gist-assets.github.com/assets/spinners/octocat-spinner-32-4ae22f00973f33151cb92eea73616c5c.gif" class="mini-loader" alt="" />
-</a>        </li>
-
-          <li aria-label="Revisions" class="tooltipped tooltipped-w">
-            <a href="/mojavelinux/9a8d3f1d32a8f0656a42/revisions" data-pjax="true" class="sunken-menu-item" aria-label="Revisions">
-              <span class="octicon octicon-git-commit"></span> <span class="full-word">Revisions</span>
-              <img width="16" height="16" src="https://gist-assets.github.com/assets/spinners/octocat-spinner-32-4ae22f00973f33151cb92eea73616c5c.gif" class="mini-loader" alt="" />
-              <span class="counter">3</span>
-</a>          </li>
-
-
-      </ul>
-    </div><!-- /.sunken-menu-group -->
-  </div><!-- /.sunken-menu-contents -->
-
-  <div class="only-with-full-nav">
-
-    <div style="display: block;" class="embed-url open">
-      <h3><strong>Embed</strong> URL</h3>
-      <div class="clone-url-box">
-        <input type="text" readonly="readonly" value="&lt;script src=&quot;https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42.js&quot;&gt;&lt;/script&gt;" class="clone js-url-field" />
-        <span class="url-box-clippy">
-          <button type="button" data-copied-hint="copied!" data-clipboard-text="&lt;script src=&quot;https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42.js&quot;&gt;&lt;/script&gt;" class="js-zeroclipboard minibutton zeroclipboard-button" aria-label="copy to clipboard"><span class="octicon octicon-clippy"></span></button>
-        </span>
-      </div>
-    </div>
-    <p class="clone-options"></p>
-
-      
-<div data-url="https://gist.github.com/9a8d3f1d32a8f0656a42.git" data-protocol-type="http" class="clone-url open">
-  <h3><strong>HTTPS</strong> clone URL</h3>
-  <div class="clone-url-box">
-    <input type="text" readonly="readonly" value="https://gist.github.com/9a8d3f1d32a8f0656a42.git" class="clone url-field js-url-field" />
-    <span class="url-box-clippy">
-      <button type="button" data-copied-hint="copied!" data-clipboard-text="https://gist.github.com/9a8d3f1d32a8f0656a42.git" class="js-zeroclipboard minibutton zeroclipboard-button" aria-label="copy to clipboard"><span class="octicon octicon-clippy"></span></button>
-    </span>
-  </div>
-</div>
-
-  
-<div data-url="git@gist.github.com:/9a8d3f1d32a8f0656a42.git" data-protocol-type="ssh" class="clone-url ">
-  <h3><strong>SSH</strong> clone URL</h3>
-  <div class="clone-url-box">
-    <input type="text" readonly="readonly" value="git@gist.github.com:/9a8d3f1d32a8f0656a42.git" class="clone url-field js-url-field" />
-    <span class="url-box-clippy">
-      <button type="button" data-copied-hint="copied!" data-clipboard-text="git@gist.github.com:/9a8d3f1d32a8f0656a42.git" class="js-zeroclipboard minibutton zeroclipboard-button" aria-label="copy to clipboard"><span class="octicon octicon-clippy"></span></button>
-    </span>
-  </div>
-</div>
-
-
-<p class="clone-options">You can clone with
-      <a data-protocol="http" class="js-clone-selector" href="#">HTTPS</a>
-      or <a data-protocol="ssh" class="js-clone-selector" href="#">SSH</a>.
-</p>
-
-
-    <a title="Download hello-asciidoc.adoc as a zip file" rel="nofollow" href="/mojavelinux/9a8d3f1d32a8f0656a42/download" class="minibutton sidebar-button" aria-label="Download hello-asciidoc.adoc as a zip file">
-      <span class="octicon octicon-cloud-download"></span>
-      Download Gist
-</a>  </div><!-- /.only-with-full-nav -->
-
-</div>
-
-
-    <div class="gist-content">
-          <div class="gist-meta">
-            <div class="gist-description">
-              <p></p><div>Hello, AsciiDoc!</div><p></p>
+            <div class="btn-group">
+                <a data-target="#" data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                    <i class="fa fa-share-alt"></i> Share
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a title="Tweet" data-toggle="tooltip" target="_blank" href="https://twitter.com/intent/tweet?text=Check%20this%20out%3A%20Hello%2C%20AsciiDoc%21&amp;url=http%3A%2F%2Fgist.asciidoctor.org%2F%3F9a8d3f1d32a8f0656a42" id="twitter-share">
+                        <i class="fa fa-fw fa-twitter-square"></i> Twitter
+                    </a></li>
+                    <li><a title="Share link on Facebook" data-toggle="tooltip" target="_blank" href="http://www.facebook.com/share.php?u=http%3A%2F%2Fgist.asciidoctor.org%2F%3F9a8d3f1d32a8f0656a42" id="facebook-share">
+                        <i class="fa fa-fw fa-facebook-square"></i> Facebook
+                    </a></li>
+                    <li><a title="Share link on Google+" data-toggle="tooltip" target="_blank" href="https://plus.google.com/share?url=http%3A%2F%2Fgist.asciidoctor.org%2F%3F9a8d3f1d32a8f0656a42" id="google-plus-share">
+                        <i class="fa fa-fw fa-google-plus-square"></i> Google+
+                    </a></li>
+                </ul>
             </div>
-          </div>
+        </span>
 
-      <div class="files">
-            <div class="file " id="file-hello-asciidoc-adoc">
-    <a class="link-overlay" href="/mojavelinux/9a8d3f1d32a8f0656a42">
-    <span class="link">View <strong>hello-asciidoc.adoc</strong> <span class="octicon octicon-arrow-right"></span></span>
-  </a>
-  <div class="meta clearfix">
-    <div class="info file-name">
-      <span class="icon">
-        <b class="octicon octicon-gist"></b>
-      </span>
-      <a class="tooltipped tooltipped-s permalink" href="#file-hello-asciidoc-adoc" aria-label="Permalink"><strong class="file-name js-selectable-text">hello-asciidoc.adoc</strong></a>
+        <form class="navbar-form pull-right">
+            <div class="input-group">
+          <span class="input-group-addon">
+            <i class="fa fa-github"></i> <i class="fa fa-dropbox"></i>
+          </span>
+                <input type="text" placeholder="GitHub Gist/File / Dropbox URL" id="gist-id" class="span2 form-control" />
+            </div>
+        </form>
     </div>
-    <div class="actions">
-      <div class="button-group">
-        <a class="minibutton raw-url js-view-raw" data-skip-pjax="" href="/mojavelinux/9a8d3f1d32a8f0656a42/raw/4a6170d281599f6b5705709bef40db273bf21aef/hello-asciidoc.adoc" aria-label="View Raw">Raw</a>
-      </div>
-    </div>
-  </div>
-  <div class="suppressed">
-    <a class="js-show-suppressed-file">File suppressed. Click to show.</a>
-  </div>
-  <div class="blob-wrapper data type-asciidoc js-blob-data">
-    
-
-    <div class="readme context-loader-container context-loader-overlay">
-      <article data-task-list-update-url="https://gist.github.com/mojavelinux/9a8d3f1d32a8f0656a42/file/hello-asciidoc.adoc" class="markdown-body js-file ">
-        <h1>
-<a rel="noreferrer" href="#hello-asciidoc" class="anchor" name="user-content-hello-asciidoc"><span class="octicon octicon-link"></span></a>Hello, AsciiDoc!</h1>
-<div>
-<div>
-<div>
-<p>An introduction to <a rel="noreferrer" href="http://asciidoc.org">AsciiDoc</a>.</p>
+</div>
+<div id="content"><h1>Hello, AsciiDoc!</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>An introduction to <a href="http://asciidoc.org">AsciiDoc</a>.</p>
 </div>
 </div>
 </div>
-<div>
-<h2>
-<a rel="noreferrer" href="#first-section" class="anchor" name="user-content-first-section"><span class="octicon octicon-link"></span></a>First Section</h2>
-<div>
-<div>
-<ul class="task-list">
+<div class="sect1">
+<h2 id="_first_section"><a href="#_first_section" class="anchor"></a>First Section</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
 <li>
 <p>item 1</p>
 </li>
@@ -232,108 +151,14 @@
 </li>
 </ul>
 </div>
-<div>
-<div>
-<pre><code>puts "Hello, World!"</code></pre>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="ruby" class="language-ruby hljs ">puts <span class="hljs-string">"Hello, World!"</span></code></pre>
 </div>
 </div>
 </div>
-</div>
-      </article>
-    </div>
+</div></div>
 
 
 
-  </div>
-</div>
-
-
-        <div class="discussion-timeline js-quote-selection-container">
-
-          <div class="js-discussion">
-            
-          </div>
-
-          <div class="discussion-timeline-actions">
-              <div class="signed-out-comment">
-	<a rel="nofollow" href="https://github.com/signup?return_to=gist" class="button primary">Sign up for free</a>
-	<strong>to join this conversation on GitHub</strong>.
-	Already have an account?
-  <a rel="nofollow" href="https://gist.github.com/login?return_to=%2Fmojavelinux%2F9a8d3f1d32a8f0656a42">Sign in to comment</a>
-</div>
-
-
-          </div>
-        </div><!-- /.discussion-timeline -->
-      </div><!-- /.gist-content -->
-    </div>
-  </div>
-</div><!-- /.container -->
-
-  <div class="context-overlay"></div>
-</div>
-
-    </div>
-    <div class="slow-loading-overlay"></div>
-  </div>
-
-  <div class="flash flash-error" id="ajax-error-message">
-    <div class="container">
-      <span class="octicon octicon-alert"></span>
-      Something went wrong with that request. Please try again.
-      <a class="octicon octicon-x ajax-error-dismiss" href="#"></a>
-    </div>
-  </div>
-
-
-  <footer>
-    <div class="container">
-  <div class="site-footer">
-    <ul class="site-footer-links right">
-      <li><a href="https://status.github.com/">Status</a></li>
-      <li><a href="http://developer.github.com">API</a></li>
-      <li><a href="https://github.com/blog">Blog</a></li>
-      <li><a href="https://github.com/about">About</a></li>
-
-    </ul>
-
-    <a href="/">
-      <span title="GitHub " class="mega-octicon octicon-mark-github"></span>
-    </a>
-
-    <ul class="site-footer-links">
-      <li>© 2014 <span title="0.01336s from github-fe103-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
-        <li><a href="https://github.com/site/terms">Terms</a></li>
-        <li><a href="https://github.com/site/privacy">Privacy</a></li>
-        <li><a href="https://github.com/security">Security</a></li>
-        <li><a href="https://github.com/contact">Contact</a></li>
-    </ul>
-  </div><!-- /.site-footer -->
-</div><!-- /.container -->
-
-  </footer>
-
-  <div id="fullscreen_overlay" class="fullscreen-overlay js-fullscreen-overlay">
-  <div class="fullscreen-container js-fullscreen-container">
-    <div class="textarea-wrap">
-      <textarea data-suggester="fullscreen_suggester" placeholder="" class="fullscreen-contents js-fullscreen-contents" id="fullscreen-contents" name="fullscreen-contents"></textarea>
-        <div class="suggester-container">
-            <div data-url="/mojavelinux/9a8d3f1d32a8f0656a42/suggestions" id="fullscreen_suggester" class="suggester fullscreen-suggester js-navigation-container">
-            </div>
-        </div>
-    </div>
-  </div>
-  <div class="fullscreen-sidebar">
-    <a aria-label="Exit Zen Mode" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" href="#">
-      <span class="mega-octicon octicon-screen-normal"></span>
-    </a>
-    <a aria-label="Switch themes" class="theme-switcher js-theme-switcher tooltipped tooltipped-w" href="#">
-      <span class="octicon octicon-color-mode"></span>
-    </a>
-  </div>
-</div>
-
-
-
-
-<div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" style="position: absolute; left: 0px; top: -9999px; width: 1px; height: 1px; z-index: 999999999;"><object width="100%" height="100%" data="https://gist-assets.github.com/assets/dist/ZeroClipboard-b3cbd0443d74e78c5f5b5f5941a19846.swf" type="application/x-shockwave-flash" name="global-zeroclipboard-flash-bridge" id="global-zeroclipboard-flash-bridge"><param value="always" name="allowScriptAccess" /><param value="all" name="allowNetworking" /><param value="false" name="menu" /><param value="transparent" name="wmode" /><param value="trustedOrigins=gist.github.com%2C%2F%2Fgist.github.com%2Chttps%3A%2F%2Fgist.github.com&amp;swfObjectId=global-zeroclipboard-flash-bridge" name="flashvars" /></object></div></body><canvas id="fxdriver-screenshot-canvas" style="display: none;" width="1020" height="857"></canvas></html>
+</body></html>
