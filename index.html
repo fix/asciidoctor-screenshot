@@ -60,7 +60,7 @@ and you get
 <li>
 <strong>dimension</strong>: size of the screenshot for instance 800x600. Try awesomeness with "FRAME_IPHONE4", "FRAME_IPHONE5", "FRAME_SAMSUNG_S4", "FRAME_IMAC" or "FRAME_BROWSER"</li>
 <li>
-<strong>action="browse"</strong>: all other parameters are ignored, the block following is used to script the browsing. Useful if you need to login beforehand</li>
+<strong>action="browse"</strong>: "url" and "selector" parameters are ignored, the block following is used to script the browsing. Useful if you need to login beforehand</li>
 <li>
 <strong>selector</strong>: the css-like dom selector to screenshot. Only this will be part of the image. For instance "div #login_window".</li>
 </ul><h3>
@@ -71,10 +71,8 @@ The Google landing page
 </code></pre>
 
 <pre><code>[screenshot, action="browse"]
-Browser.drive {
   $("input", name: "q").value("asciidoctor")
   waitFor(5){true}
-}
 </code></pre>
 
 <pre><code>[screenshot, name=google2, dimension=FRAME_BROWSER]
@@ -82,9 +80,7 @@ Some propositions should appear
 </code></pre>
 
 <pre><code>[screenshot, action="browse", dimension=FRAME_IPHONE4]
-Browser.drive {
   $("h3.r a").click()
-}
 </code></pre>
 
 <pre><code>[screenshot, name=google3, dimension=FRAME_SAMSUNG_S4]
