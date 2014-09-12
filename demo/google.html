@@ -25,6 +25,11 @@ img[alt=FRAME_BROWSER] {
 	position: relative;
 	background-size: 100% auto;
 }
+
+img[alt=FRAME_BROWSER]::after {
+	content: "teset"
+}
+
 img[alt=FRAME_IMAC]{
 	background: url(css/imac.png) no-repeat;
 	box-shadow: none;
@@ -51,14 +56,39 @@ img[alt=FRAME_IPHONE4]{
 img[alt=FRAME_IPHONE5]{
 	background: url(css/iphone5.png) no-repeat;
 	box-shadow: none;
-	padding-top: 80px;
+	padding-top: 72px;
 	padding-bottom: 89px;
-	padding-left: 21px;
+	padding-left: 19px;
+	padding-right: 17px;
+	max-width: 230px;
+	position: relative;
+	background-size: 100% auto;
+}
+
+img[alt=FRAME_IPHONE6]{
+	background: url(css/iphone6.png) no-repeat;
+	box-shadow: none;
+	padding-top: 61px;
+	padding-bottom: 89px;
+	padding-left: 19px;
 	padding-right: 19px;
 	max-width: 256px;
 	position: relative;
 	background-size: 100% auto;
 }
+
+img[alt=FRAME_IPHONE6PLUS]{
+	background: url(css/iphone6plus.png) no-repeat;
+	box-shadow: none;
+	padding-top: 72px;
+	padding-bottom: 89px;
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 300px;
+	position: relative;
+	background-size: 100% auto;
+}
+
 
 img[alt=FRAME_SAMSUNG_S4]{
 	background: url(css/samsungs4.png) no-repeat;
@@ -71,7 +101,6 @@ img[alt=FRAME_SAMSUNG_S4]{
 	position: relative;
 	background-size: 100% auto;
 }
-
 
 
 
@@ -524,7 +553,7 @@ This is an example using screenshot plugin for gradle-asciidoctor
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="screenshots/google2.png" alt="FRAME_BROWSER">
+<img src="screenshots/36PYGN72G4Z9Z9FSIME439GJ9RRMQY66.png" alt="FRAME_BROWSER">
 </div>
 <div class="title">Figure 2. Some propositions should appear</div>
 </div>
@@ -536,7 +565,7 @@ This is an example using screenshot plugin for gradle-asciidoctor
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="screenshots/google3.png" alt="FRAME_BROWSER">
+<img src="screenshots/4FKJPX4LPUCLIBTJ3ABDP0VLEXIHAP4D.png" alt="FRAME_BROWSER">
 </div>
 <div class="title">Figure 3. Awesome!</div>
 </div>
@@ -557,21 +586,27 @@ This is an example using screenshot plugin for gradle-asciidoctor
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="screenshots/google5.png" alt="FRAME_IPHONE4">
+<img src="screenshots/Q6SLOUZN51ZQPW2FTKVTYDMH460L2118.png" alt="FRAME_IPHONE5">
 </div>
-<div class="title">Figure 5. Look Ma, it&#8217;s iphone4!</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="screenshots/google6.png" alt="FRAME_IPHONE5">
-</div>
-<div class="title">Figure 6. Look Ma, it&#8217;s iphone5!</div>
+<div class="title">Figure 5. Look Ma, it&#8217;s iphone5!</div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="screenshots/google7.png" alt="FRAME_SAMSUNG_S4">
+<img src="screenshots/7HWWGH5MTA3LG2T4FCOXHBZBETWOL56K.png" alt="FRAME_IPHONE6">
 </div>
-<div class="title">Figure 7. Look Ma, it&#8217;s samsung s4!</div>
+<div class="title">Figure 6. Look Ma, it&#8217;s iphone6!</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="screenshots/XSZLXDZVPME20XZZZKNRYIW5KDAYK830.png" alt="FRAME_IPHONE6PLUS">
+</div>
+<div class="title">Figure 7. Look Ma, it&#8217;s iphone6plus!</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="screenshots/ALZOUB58AJIGBJ80HDTBGI6UQARGREYX.png" alt="FRAME_SAMSUNG_S4">
+</div>
+<div class="title">Figure 8. Look Ma, it&#8217;s samsung s4!</div>
 </div>
 <div class="paragraph">
 <p>Here you have just unlocked the google <strong>God Badge</strong>. Congratulations!!!</p>
@@ -581,7 +616,7 @@ This is an example using screenshot plugin for gradle-asciidoctor
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-26 13:10:57 CEST
+Last updated 2014-09-12 16:46:57 CEST
 </div>
 </div>
 </body>
